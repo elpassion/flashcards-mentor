@@ -51,4 +51,5 @@ group :development do
 end
 
 gem 'devise'
+gem 'ffaker', require: false
 gem 'slim-rails'

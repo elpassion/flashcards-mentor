@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   has_many :authored_decks,
-           class_name: 'Deck',
-           dependent:  :destroy
+           class_name:  'Deck',
+           foreign_key: :author_id,
+           dependent:   :destroy
 
   has_many :subscriptions,
            dependent: :destroy
