@@ -1,0 +1,6 @@
+tr
+  td = card.front
+  td = card.back
+  td = link_to 'Show', admin_deck_card_path(@deck, card)
+  td = link_to 'Edit', edit_admin_deck_card_path(@deck, card)
+  td = link_to 'Destroy', admin_deck_card_path(@deck, card), data: {confirm: 'Are you sure?'}, method: :delete

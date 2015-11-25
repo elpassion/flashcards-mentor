@@ -1,0 +1,7 @@
+tr
+  td = deck.name
+  td = deck.description
+  td = link_to 'Show', admin_deck_path(deck)
+  td = link_to 'Edit', edit_admin_deck_path(deck)
+  td = link_to 'Destroy', admin_deck_path(deck), data: {confirm: 'Are you sure?'}, method: :delete
+  td = link_to 'Cards', admin_deck_cards_path(deck)

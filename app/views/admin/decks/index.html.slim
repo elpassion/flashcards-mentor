@@ -1,0 +1,16 @@
+h1 Listing decks
+
+table
+  thead
+    tr
+      th Name
+      th Description
+      th
+      th
+      th
+
+  tbody = render @decks
+
+br
+
+= link_to 'New Deck', new_admin_deck_path
