@@ -6,14 +6,8 @@ class Admin::DecksController < ApplicationController
     @decks = current_user.authored_decks.order(:name).all
   end
 
-  def show
-  end
-
   def new
     @deck = current_user.authored_decks.new
-  end
-
-  def edit
   end
 
   def create
