@@ -1,6 +1,8 @@
 tr
   td = deck.name
   td = deck.description
+  td = deck.cards_count
+  td = deck.subscribed_users_count
   td = link_to 'Show', admin_deck_path(deck)
   td = link_to 'Edit', edit_admin_deck_path(deck)
   td = link_to 'Destroy', admin_deck_path(deck), data: {confirm: 'Are you sure?'}, method: :delete
