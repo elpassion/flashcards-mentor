@@ -21,4 +21,11 @@ class Deck < ActiveRecord::Base
            through: :subscriptions,
            source:  :user
 
+  validates :name,
+            length:   { maximum: 255 },
+            presence: true
+
+  validates :description,
+            presence: true
+
 end

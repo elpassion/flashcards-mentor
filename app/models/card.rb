@@ -10,4 +10,7 @@ class Card < ActiveRecord::Base
            through: :repetitions,
            source:  :user
 
+  validates :front, :back,
+            presence: true
+
 end

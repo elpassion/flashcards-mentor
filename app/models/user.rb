@@ -17,4 +17,8 @@ class User < ActiveRecord::Base
            through: :repetitions,
            source:  :card
 
+  validates :first_name, :last_name,
+            length:   { maximum: 255 },
+            presence: true
+
 end
