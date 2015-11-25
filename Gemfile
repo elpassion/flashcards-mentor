@@ -50,4 +50,5 @@ group :development do
   gem 'spring'
 end
 
+gem 'devise'
 gem 'slim-rails'
