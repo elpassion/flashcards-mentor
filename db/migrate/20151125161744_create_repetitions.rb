@@ -3,11 +3,13 @@ class CreateRepetitions < ActiveRecord::Migration
     create_table :repetitions do |t|
       t.references :user, null: false, index: true, foreign_key: true
       t.references :card, null: false, index: true, foreign_key: true
+
       t.datetime :due
-      t.boolean :repeat, null: false, default: false
-      t.float :e_factor
+      t.float :easiness_factor
       t.integer :interval
       t.integer :iteration
+      t.boolean :repeat, null: false, default: false
+      t.integer :answers_count, null: false, default: 0
 
       t.timestamps null: false
     end

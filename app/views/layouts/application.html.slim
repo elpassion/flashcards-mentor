@@ -8,9 +8,11 @@ html
   body
     h1 = link_to 'Flashcards', root_path
     hr
-    =' link_to 'Decks', decks_path
+    => link_to 'Learn', repetitions_path
+    ' |
+    => link_to 'Decks', decks_path
     - if user_signed_in?
       ' |
-      =' link_to 'My Decks', admin_decks_path
+      => link_to 'My Decks', admin_decks_path
     hr
     = yield

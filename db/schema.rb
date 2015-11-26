@@ -60,15 +60,16 @@ ActiveRecord::Schema.define(version: 20151125182721) do
   add_index "decks", ["author_id"], name: "index_decks_on_author_id", using: :btree
 
   create_table "repetitions", force: :cascade do |t|
-    t.integer  "user_id",                    null: false
-    t.integer  "card_id",                    null: false
+    t.integer  "user_id",                         null: false
+    t.integer  "card_id",                         null: false
     t.datetime "due"
-    t.boolean  "repeat",     default: false, null: false
-    t.float    "e_factor"
+    t.float    "easiness_factor"
     t.integer  "interval"
     t.integer  "iteration"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.boolean  "repeat",          default: false, null: false
+    t.integer  "answers_count",   default: 0,     null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_index "repetitions", ["card_id"], name: "index_repetitions_on_card_id", using: :btree

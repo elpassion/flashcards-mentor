@@ -69,14 +69,14 @@ namespace :db do
     user.authored_decks.create(name: FFaker::Lorem.sentence(0).chop, description: FFaker::Lorem.paragraph)
   end
 
-  def create_cards(count = 50)
+  def create_cards(count = 5)
     Deck.find_each do |deck|
       count.times { |index| create_card(deck, index) }
     end
   end
 
   def create_card(deck, index = nil)
-    deck.cards.create(front: "#{FFaker::Color.name} #{FFaker::Lorem.word}", back: "#{FFaker::Lorem.word} #{FFaker::Color.name}")
+    deck.cards.create(front: "#{index + 1}: #{FFaker::Color.name} #{FFaker::Lorem.word}", back: "#{index + 1}: #{FFaker::Lorem.word} #{FFaker::Color.name}")
   end
 
   def create_subscriptions(count = 3)

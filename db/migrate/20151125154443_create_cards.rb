@@ -2,6 +2,7 @@ class CreateCards < ActiveRecord::Migration
   def change
     create_table :cards do |t|
       t.references :deck, null: false, index: true, foreign_key: true
+
       t.text :front
       t.text :back
       t.integer :position, null: false, default: 1

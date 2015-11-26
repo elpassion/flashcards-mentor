@@ -13,4 +13,6 @@ class Card < ActiveRecord::Base
   validates :front, :back,
             presence: true
 
+  acts_as_list scope: :deck
+
 end

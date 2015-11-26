@@ -50,6 +50,7 @@ group :development do
   gem 'spring'
 end
 
+gem 'acts_as_list'
 gem 'devise'
 gem 'ffaker', require: false
 gem 'slim-rails'

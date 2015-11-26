@@ -1,0 +1,11 @@
+h1 Learn
+
+p style='height: 3em; border: 1px solid #eee' = @card.front
+p style='height: 3em; border: 1px solid #eee' = @card.back
+
+= form_tag deck_repetitions_path(@deck) do
+  = hidden_field_tag :card_id, @card.id
+
+  = submit_tag "Don't know", name: 'answer_0'
+  = submit_tag 'Umhh...', name: 'answer_1'
+  = submit_tag 'I know!', name: 'answer_2'

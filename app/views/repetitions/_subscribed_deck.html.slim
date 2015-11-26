@@ -1,0 +1,5 @@
+tr
+  td = subscribed_deck.name
+  td = @due_count[subscribed_deck.id]
+  td
+  td = link_to 'Learn', new_deck_repetition_path(subscribed_deck)

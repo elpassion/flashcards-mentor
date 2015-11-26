@@ -7,7 +7,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :decks, only: :index
+  resources :decks, only: :index do
+    resources :repetitions, only: [:new, :create]
+  end
+
+  resources :repetitions, only: :index
 
   root 'welcome#index'
+
 end
